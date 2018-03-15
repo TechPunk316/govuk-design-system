@@ -9,7 +9,7 @@ layout: layout-pane.njk
 ---
 {% from "_example.njk" import example %}
 
-This pattern is currently experimental because [more research](/patterns/technical-problem-pages#research-on-this-pattern) is needed to validate it.
+This pattern is currently experimental because [more research](#research-on-this-pattern) is needed to validate it.
 
 This is a page that tells someone there is something wrong with the service. They are also known as 500 pages.
 
@@ -45,6 +45,8 @@ Have clear and concise content and do not use:
 - red text to warn people
 
 ### Service has a GOV.UK contact page
+
+{{ example({group: 'patterns', item: 'technical-problem-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ### Service has offline support but no GOV.UK contact page
 
