@@ -1,1 +1,63 @@
+---
+title: Technical problem pages
+description: This is a page that tells someone there is something wrong with the service. They are also known as 500 pages.
+section: Patterns
+theme: Pages
+aliases: 
+backlog_issue_id: 22
+layout: layout-pane.njk
+---
+{% from "_example.njk" import example %}
 
+This is a page that tells someone there is something wrong with the service. They are also known as 500 pages.
+
+{{ example({group: 'patterns', item: 'technical-problem-pages', example: 'default', html: true, nunjucks: true, open: false}) }}
+
+## When to use this pattern
+
+Use a technical problem page when there is an unexpected problem with the service. Use the same page for all technical problems.
+
+Log all errors and fix them as quickly as possibly.
+
+Only display the page for a short time. If a problem cannot be fixed quickly, close the service and use a [service unavailable page](link to service unavailable page).
+
+## How it works
+
+Use the standard page template from your service and have the same:
+
+- header
+- phase banner
+- footer
+
+The page should have:
+
+- “There is a problem with the service – [service name] – GOV.UK” as the page title
+- “There is a problem with the service” as the H1
+- “Try again later.” as a lede paragraph
+- contact information, if it exists and helps meet a user need
+
+Contact information should be either:
+
+- a link to a specific GOV.UK contact page not a general contact page
+- formatted like a GOV.UK contact page when there is no GOV.UK page
+
+Have clear and concise content and do not use:
+
+- breadcrumbs
+- words like 500, bad request, please, sorry and “We are experiencing technical difficulties”
+- red text to warn people
+
+### Service has a GOV.UK contact page
+
+### Service has offline support but no GOV.UK contact page
+
+## Research on this pattern
+
+We need more research – [add your research on GitHub](link to issue).
+
+We want to know:
+
+- what people need to know
+- what their expectations are after reading the page
+- if people understand what is going on when they see the page
+- if people expect to see please and sorry
