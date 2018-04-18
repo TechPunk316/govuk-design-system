@@ -13,30 +13,22 @@ layout: layout-example.njk
         <p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
         <p class="govuk-body">If the web address is correct or you selected a link or button, you can:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>tell us what you were trying to do</li>
             <li><a class="govuk-list" href="https://www.gov.uk/contact-the-tax-credit-office">contact the Tax Credit Helpline</a> if you need to speak to someone about your tax credits</li>
+            <li>report the page not found</li>
           </ul>
-        <h2 class="govuk-heading-l">Tell us what you were trying to do</h2>
+        <p class="govuk-body">If you want us to tell you when we have fixed the link or button, give us your name and email address.</p>
         <form action="/url/of/next/page" method="post">
-          <div class="govuk-o-form-group"><label class="govuk-c-label" for="full-name">
-            Full name
+          <div class="govuk-o-form-group"><label class="govuk-c-label" for="name">
+            Name (optional)
           </label>
-          <input class="govuk-c-input" id="full-name" name="full-name" type="text">
+          <input class="govuk-c-input" id="name" name="name" type="text">
           </div>
           <div class="govuk-o-form-group"><label class="govuk-c-label" for="email">
           Email address
           </label>
           <input class="govuk-c-input" id="email" name="email" type="text">
           </div>
-          <div class="govuk-o-form-group"><label class="govuk-c-label" for="what">
-           What were you trying to do?
-            <span class="govuk-c-label__hint">
-            Do not include personal or financial information like your National Insurance number or credit card details.
-            </span>
-          </label>
-          <textarea id="more-detail" name="more-detail" rows="5" class="govuk-c-textarea"></textarea>
-          </div>
-          <input value="Continue" type="submit" class="govuk-c-button">
+          <button type="submit" class="govuk-c-button" id="continue">Report a page not found</button>
         </form>
         
       </div>
