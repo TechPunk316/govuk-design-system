@@ -9,25 +9,25 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-{{ example({group: 'components', item: 'error-message', example: 'default'}) }}
+{{ example({group: 'components', item: 'error-message', example: 'default', html: true, nunjucks: true, open: false}) }}
 
 ## When to use this component
 
-Show an error message next to the field and in the [Error summary] when there is a validation error. Explain what went wrong and how to fix it.
+Show an error message next to the field and in the [Error summary](../error-summary/) when there is a validation error. Explain what went wrong and how to fix it.
 
 Use standard messages for different components.
 
 Try to [design your service to be easy to use and understand so someone never sees an error message](../fill-in-a-form/).
 
-### When not to use this component
+## When not to use this component
 
-Only display an error when someone tries to move to the next part of the service. Do not use give error messages:
+Only display an error when someone tries to move to the next part of the service. Do not show error messages:
 
-- when they select or tab to a field
+- when users select or tab to a field
 - as they are typing
 - when they move away from a field
 
-Do not use this pattern to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:
+Do not use this error messages to tell users that they are not eligible or do not have permission to do something. Instead, take them to a screen that:
 
 - explains why we cannot accept the entry or selection
 - tells them what to do next
@@ -37,7 +37,7 @@ Do not use this pattern to tell users that they are not eligible or do not have 
 
 For each error:
 
-- put the message in red inside the question’s <label> or <legend>, after the question text and hint text
+- put the message in red inside the question’s `<label>` or `<legend>`, after the question text and hint text
 - use a red border to visually connect the message and the question it belongs to
 - if the error relates to specific text fields within the question, give these a red border as well
 
@@ -64,15 +64,15 @@ Do not use:
 - ‘please’ because it implies a choice
 - ‘sorry’ because it does not help fix the problem
 - ‘valid’ and ‘invalid’ because they do not add anything to the message
-- humour and personality
+- humourous, informal language like 'oops'
 
 Some errors work better as instructions and some work better as descriptions. For example:
 
 - ‘Enter your first name’ is clearer, more direct and natural than ‘First name must have an entry’
-- ‘Enter a first name that is 35 characters or less’ is wordier, less direct and natural than ‘FIrst name must be 35 characters or less’
+- ‘Enter a first name that is 35 characters or less’ is wordier, less direct and natural than ‘First name must be 35 characters or less’
 – ‘Enter a date after 31 August 2017 for when you started the course’ is wordier, less direct and natural than ‘Date you started the course must be after 31 August 2017’
 
-Use both types consistently. Do not use instructions for most empty fields and a description for others.
+Use both types, but be consistent in how you apply them. For example, use an instruction for empty fields like 'Enter your name', but a description like 'Name must be 35 characters or less' for entries that are too long.
 
 Clarity is more important than consistency.
 
@@ -80,7 +80,7 @@ Read the message out loud to see if it sounds like something you would say.
 
 ### Be consistent
 
-Use the same message next to the field and in the [Error summary] so they:
+Use the same message next to the field and in the [Error summary](../error-summary/) so they:
 
 - look, sound and mean the same
 - make sense out of context
@@ -112,18 +112,18 @@ An error for a specific situation is more helpful. It will tell someone what has
 
 Find out how often people see them. This will let you:
 
-- edit content
+- improve content
 - A/B test variations
 - redesign a journey
 
 ## Research on this component
 
-Error messages designed using this information have been tested with all types of users in live services, like tax credits.
+Error messages designed using this guidance have been tested with all types of users in live services, including tax credits.
 
-Research showed people:
+Research showed the messages meant users:
 
-- understand what has gone wrong
-- know how to fix the problem
+- understood what went wrong
+- knew how to fix the problem
 - were able to recover from the error
 
 If you’ve used this component, get in touch to share your user research findings.
